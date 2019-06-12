@@ -1,0 +1,203 @@
+.stage {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-image {
+  width: 100vw;
+  height: 1660rpx;
+}
+
+.lanren {
+  position: absolute;
+  width: 170px;
+  height: 160px;
+  top: 575rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  animation: a 1000s linear;
+  -webkit-animation: a 1000s linear;
+
+}
+
+// .Td {
+//   width: 170px;
+//   height: 160px;
+//   top: 575rpx;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   position: absolute;
+//   transform: rotateX(50deg);
+//   transform-style: preserve-3d;
+//   -webkit-transform: rotateX(75deg);
+//   -webkit-transform-style: preserve-3d;
+//   background-color: red;
+
+// }
+
+.egg {
+  width: 70px;
+  height: 130px;
+  transform-origin: center;
+  -webkit-transform-origin: center;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  margin: auto;
+}
+
+.egg-item {
+  width: 110%;
+  height: 100px;
+}
+
+.egg-break {
+  width: 130%;
+}
+
+.hammer {
+  position: absolute;
+  z-index: 10;
+  left: 34%;
+  top: -36%;
+  width: 100px;
+  display: block;
+  max-width: none;
+  -webkit-animation: hammer 0.5s alternate;
+  animation: hammer 0.5s alternate;
+  transform-origin: bottom right;
+  -webkit-transform-origin: bottom right;
+}
+
+.lanren.pause {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.eggPause {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.egg:nth-child(1) {
+  margin-top: 45%;
+  animation: b 1000s linear, zindex 10000ms 0ms infinite linear;
+  -webkit-animation: b 1000s linear, zindex 10000ms 0ms infinite linear;
+}
+
+.egg:nth-child(2) {
+  margin-top: -5%;
+  margin-left: -5%;
+  animation: b 1000s linear, zindex 10000ms -2500ms infinite linear;
+  -webkit-animation: b 1000s linear, zindex 10000ms -2500ms infinite linear;
+}
+
+.egg:nth-child(3) {
+  margin-top: -5%;
+  margin-right: -5%;
+  animation: b 1000s linear, zindex 10000ms -5500ms infinite linear;
+  -webkit-animation: b 1000s linear, zindex 10000ms -5500ms infinite linear;
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(36000deg);
+    -webkit-transform: rotate(36000deg);
+  }
+}
+
+@-webkit-keyframes a {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(36000deg);
+    -webkit-transform: rotate(36000deg);
+  }
+}
+
+@keyframes b {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-36000deg);
+    -webkit-transform: rotate(-36000deg);
+  }
+}
+
+@-webkit-keyframes b {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-36000deg);
+    -webkit-transform: rotate(-36000deg);
+  }
+}
+
+@keyframes zindex {
+  0% {
+    z-index: 1;
+  }
+
+  25% {
+    z-index: -1;
+  }
+
+  55% {
+    z-index: -1;
+  }
+
+  75% {
+    z-index: 1;
+  }
+}
+
+@-webkit-keyframes zindex {
+  0% {
+    z-index: 1;
+  }
+
+  25% {
+    z-index: -1;
+  }
+
+  55% {
+    z-index: -1;
+  }
+
+  75% {
+    z-index: 1;
+  }
+}
+
+@keyframes hammer {
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@-webkit-keyframes hammer {
+  50% {
+    -webkit-transform: rotate(15deg);
+  }
+}
